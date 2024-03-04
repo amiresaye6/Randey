@@ -5,18 +5,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='gpt_style.css') }}">
+    <!-- <script src="{{ url_for('static', filename='script.js') }}"></script> -->
     <link rel="stylesheet" href="/image_gen/static/style.css">
     <title>Random Image Generator</title>
 </head>
 
 <body>
     <div class="container">
+        <div class="landing">
+            <h1 class="landing-title">Randy</h1>
+            <p class="landing-description">Welcome to the Random Image Generator!</p>
+            <p class="landing-info">Get started by generating random images with various categories.</p>
+            <a href="#goto" class="landing-button">Generate Image</a>
+        </div>
         <div class="box" id="box1">
             <div class="notification">
                 <div class="notiglow"></div>
                 <div class="notiborderglow"></div>
-                <div class="notititle">
+                <div class="notititle" id="goto">
                     <form action="/generate" method="post">
                         <h1>Random.png</h1>
                         <div class="notibody">
