@@ -5,13 +5,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='gpt_style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='test_style.css') }}">
     <!-- <script src="{{ url_for('static', filename='script.js') }}"></script> -->
     <link rel="stylesheet" href="/image_gen/static/style.css">
     <title>Random Image Generator</title>
 </head>
 
 <body>
+    <header class="main-header">
+        <div class="logo">
+            <h1>Randy</h1>
+        </div>
+        <nav class="main-nav">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+    </header>
     <div class="background-image-div">
         <div class="card_back" style="background-image: url('{{ image_url }}');"></div>
         <div class="card_back" style="background-image: url('{{ image_url }}');"></div>
@@ -86,7 +99,21 @@
         </div>
 
     </div>
+    <footer class="main-footer">
+        <div class="footer-content">
+          <p>&copy; 2024 Your Company. All rights reserved.</p>
+          <nav>
+            <ul>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Terms of Service</a></li>
+              <li><a href="#">Contact Us</a></li>
+            </ul>
+          </nav>
+        </div>
+      </footer>
 
+      <!-- Button to move to the top of the webpage -->
+  <a href="#" class="back-to-top">Back to Top</a>
 </body>
 
 </html>
