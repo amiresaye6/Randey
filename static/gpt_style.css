@@ -372,5 +372,31 @@ body {
   .landing-button:hover {
     background-color: #2e46d1;
   }
-  
-  
+
+
+.background-image-div {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('your_image_url.jpg'); /* Replace 'your_image_url.jpg' with the actual URL of your image */
+  background-size: cover; /* Resize the background image to cover the entire div */
+  background-position: center; /* Center the background image */
+  background-repeat: no-repeat; /* Do not repeat the background image */
+  filter: blur(5px); /* Apply the blur effect */
+  z-index: -1; /* Place behind other elements */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Style for the cards */
+.card_back {
+  width: 200px;
+  height: 300px;
+  background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent white background */
+  border-radius: 10px;
+  margin: 0 20px; /* Add margin between the cards */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow effect */
+}
