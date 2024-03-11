@@ -34,7 +34,10 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-bottom: 100px;
 }
+
+
 
 /* main card style  */
 
@@ -53,6 +56,7 @@ body {
   --gradient: linear-gradient(to bottom, #2eadff, #3d83ff, #7e61ff);
   --color: #32a6ff
 }
+
 
 .notification:before {
   position: absolute;
@@ -321,58 +325,66 @@ body {
   align-items: center;
 }
 
-/* landing page style  */
-/* Adjustments for the landing page to take up the full viewport height */
-.container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .landing {
-    text-align: center;
-    margin-top: 22vh;
-    flex-grow: 1; /* Allow the landing section to grow to fill available space */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 70vh;
-  }
-  
-  .landing-title {
-    font-size: 3em;
-    color: #fff;
-    margin-bottom: 20px;
-  }
-  
-  .landing-description {
-    font-size: 1.5em;
-    color: #fff;
-    margin-bottom: 10px;
-  }
-  
-  .landing-info {
-    font-size: 1.1em;
-    color: #fff;
-    margin-bottom: 30px;
-  }
-  
-  .landing-button {
-    background-color: #3654ff;
-    color: #fff;
-    padding: 15px 30px;
-    border-radius: 30px;
-    text-decoration: none;
-    font-size: 1.2em;
-    transition: background-color 0.3s ease;
-  }
-  
-  .landing-button:hover {
-    background-color: #2e46d1;
-  }
 
+/* landing part style  */
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.landing {
+  text-align: center;
+  margin-top: 22vh;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 70vh;
+}
+
+.landing-card {
+  border-radius: 20px;
+  background: #333; /* Darker background color */
+  /* box-shadow: 20px 20px 60px #2a2a2a,
+              -20px -20px 60px #3c3c3c; */
+  color: #fff;
+  padding: 30px;
+  transition: box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.landing-title {
+  font-size: 3em;
+  margin-bottom: 20px;
+}
+
+.landing-description {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.landing-info {
+  font-size: 1.1em;
+  margin-bottom: 30px;
+}
+
+.landing-button {
+  background-color: #3654ff;
+  color: #fff;
+  padding: 15px 30px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 1.2em;
+  transition: background-color 0.3s ease;
+}
+
+.landing-button:hover {
+  background-color: #2e46d1;
+}
 
 .background-image-div {
   position: fixed;
@@ -415,14 +427,14 @@ body {
   }
   
   /* Logo styles */
-  .logo h1 {
-    width: 100px; /* Adjust size as needed */
-    height: auto;
+  .logo img {
+    width: 30px;
+    height: 30px;
     transition: transform 0.3s ease-in-out; /* Adding transition for smooth animation */
   }
   
   /* Move logo upwards on hover */
-  .logo:hover h1 {
+  .logo:hover img {
     transform: translateY(-5px); /* Move logo 5px upwards */
   }
   /* Navigation styles */
@@ -453,52 +465,68 @@ body {
 
 /* Styling the footer */
 .main-footer {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
-  }
-  
-  .footer-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .footer-content p {
-    margin: 0;
-  }
-  
-  .footer-content nav ul {
-    list-style: none;
-  }
-  
-  .footer-content nav ul li {
-    display: inline;
-    margin-right: 20px;
-  }
-  
-  .footer-content nav ul li:last-child {
-    margin-right: 0;
-  }
-  
-  .footer-content nav ul li a {
-    color: #fff;
-    text-decoration: none;
-  }
+  background-color: #333; /* Fallback background color */
+  color: #fff;
+  padding: 20px;
+  transition: background-color  ease-in-out 0.3s;
+}
+/* 
+.main-footer:hover {
+  background-image: url('/static/footer_back.svg');
+
+} */
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* font-weight: bold; */
+}
+
+.footer-content p {
+  margin: 0;
+}
+
+.footer-content nav ul {
+  list-style: none;
+}
+
+.footer-content nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+.footer-content nav ul li:last-child {
+  margin-right: 0;
+}
+
+.footer-content nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+.contact_me {
+  width: 30px;
+  transition: background-color  ease-in-out 0.3s;
+}
+.contact_me:hover{
+  overflow: hidden;
+  background-color: gray;
+  border-radius: 10px;
+  padding: 2px;
+}
 
 /* Styling the back to top button */
-.back-to-top {
+/* .back-to-top {
     position: fixed;
-    bottom: 20px;
+    bottom: 80px;
     left: 20px;
     background-color: #333;
     color: #fff;
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 5px;
-    z-index: 1000; /* Ensure it stays on top of other elements */
+    z-index: 1000;
   }
   
   .back-to-top:hover {
     background-color: #555;
-  }
+  } */

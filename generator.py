@@ -43,5 +43,11 @@ def generate():
     else:
         return "Error: {} {}".format(response.status_code, response.text)
 
+@app.route('/coming_soon')
+def coming_soon():
+    """Coming soon page route"""
+    return render_template("coming_soon.html")
+
+
 if __name__ == '__main__':
     app.run(debug=True)
